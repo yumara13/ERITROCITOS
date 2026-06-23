@@ -1,0 +1,547 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eritrocitos o Glóbulos Rojos</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffebee,#ffcdd2);
+    color:#7f0000;
+    line-height:1.6;
+}
+
+.header-top{
+    background:#b71c1c;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-area img{
+    width:70px;
+    height:auto;
+}
+
+.logo-area h3{
+    font-size:20px;
+}
+
+.autor{
+    text-align:right;
+    font-weight:bold;
+}
+
+header{
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(90deg,#ef5350,#b71c1c);
+    color:white;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#b71c1c;
+    border-left:6px solid #e53935;
+    padding-left:10px;
+    margin-bottom:15px;
+}
+
+h3{
+    color:#c62828;
+    margin:15px 0 8px;
+}
+
+ul, ol{
+    padding-left:25px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.highlight{
+    background:#ffebee;
+    padding:15px;
+    border-left:5px solid #e53935;
+    border-radius:10px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.imagenes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
+
+.imagen-box{
+    text-align:center;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.imagen-box img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.imagen-box h3{
+    padding:12px;
+    margin:0;
+}
+
+footer{
+    background:#b71c1c;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media screen and (max-width:768px){
+
+    .header-top{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+        padding:15px;
+    }
+
+    .logo-area{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo-area img{
+        width:60px;
+    }
+
+    .logo-area h3{
+        font-size:18px;
+    }
+
+    .autor{
+        text-align:center;
+        font-size:16px;
+    }
+
+    header{
+        padding:30px 15px;
+    }
+
+    header h1{
+        font-size:2rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    .container{
+        width:95%;
+        padding:20px 0;
+    }
+
+    .card{
+        padding:15px;
+    }
+
+    .grid,
+    .imagenes{
+        grid-template-columns:1fr;
+    }
+
+    h2{
+        font-size:1.3rem;
+    }
+
+    h3{
+        font-size:1rem;
+    }
+
+    ul, ol{
+        padding-left:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header-top">
+    <div class="logo-area">
+        <img src="TECBA.png" alt="Logo TECBA">
+        <h3>Tecnológico Boliviano Alemán</h3>
+    </div>
+
+    <div class="autor">
+        Por: Jhery Quito Rivera
+    </div>
+</div>
+
+<header>
+    <h1>Eritrocitos o Glóbulos Rojos</h1>
+    <p>Células sanguíneas encargadas del transporte de oxígeno</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>¿Qué son los eritrocitos?</h2>
+        <p>
+            Los eritrocitos, también llamados glóbulos rojos o hematíes, son las células más abundantes de la sangre.
+            Su función principal es transportar oxígeno desde los pulmones hacia todos los tejidos del cuerpo y llevar parte
+            del dióxido de carbono desde los tejidos hacia los pulmones para su eliminación.
+        </p>
+        <p>
+            Representan aproximadamente el 40-50% del volumen sanguíneo total y son esenciales para la respiración celular
+            y la producción de energía en el organismo.
+        </p>
+
+        <div class="imagenes">
+            <div class="imagen-box">
+                <img src="GLOBULOS.jpeg" alt="Glóbulos rojos">
+                <h3>Glóbulos Rojos</h3>
+            </div>
+
+            <div class="imagen-box">
+                <img src="ERITROCITOS.jpeg" alt="Eritrocitos">
+                <h3>Eritrocitos</h3>
+            </div>
+
+            <div class="imagen-box">
+                <img src="ROJOS.jpeg" alt="Células rojas">
+                <h3>Células Rojas</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Características generales</h2>
+        <div class="grid">
+            <ul>
+                <li><strong>Nombre:</strong> Eritrocito, hematíe o glóbulo rojo.</li>
+                <li><strong>Forma:</strong> Disco bicóncavo.</li>
+                <li><strong>Color:</strong> Rojo debido a la hemoglobina.</li>
+                <li><strong>Tamaño:</strong> Aproximadamente 7-8 μm de diámetro.</li>
+                <li><strong>Grosor:</strong> 2 μm en los bordes y 1 μm en el centro.</li>
+            </ul>
+
+            <ul>
+                <li><strong>Núcleo:</strong> Ausente en eritrocitos maduros.</li>
+                <li><strong>Orgánulos:</strong> No poseen mitocondrias, retículo endoplasmático ni aparato de Golgi.</li>
+                <li><strong>Vida media:</strong> Aproximadamente 120 días.</li>
+                <li><strong>Producción:</strong> Médula ósea roja.</li>
+                <li><strong>Destrucción:</strong> Principalmente en el bazo, hígado y médula ósea.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Forma de los eritrocitos</h2>
+        <p>
+            Los eritrocitos tienen forma de disco bicóncavo, es decir, están hundidos en el centro por ambas caras.
+        </p>
+
+        <div class="highlight">
+            <strong>Ventajas de esta forma:</strong>
+            <ul>
+                <li>Aumenta la superficie para el intercambio de gases.</li>
+                <li>Facilita el transporte de oxígeno y dióxido de carbono.</li>
+                <li>Permite atravesar capilares muy estrechos.</li>
+                <li>Favorece la flexibilidad celular.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Composición</h2>
+            <h3>Membrana plasmática</h3>
+            <ul>
+                <li>Fosfolípidos.</li>
+                <li>Colesterol.</li>
+                <li>Proteínas integrales y periféricas.</li>
+            </ul>
+
+            <h3>Citoplasma</h3>
+            <ul>
+                <li>Agua.</li>
+                <li>Hemoglobina.</li>
+                <li>Enzimas metabólicas.</li>
+                <li>Electrolitos.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Hemoglobina</h2>
+            <p>La hemoglobina es la proteína más importante de los eritrocitos.</p>
+
+            <h3>Funciones</h3>
+            <ul>
+                <li>Transportar oxígeno.</li>
+                <li>Transportar parte del dióxido de carbono.</li>
+                <li>Ayudar a mantener el equilibrio ácido-base.</li>
+            </ul>
+
+            <h3>Estructura</h3>
+            <ul>
+                <li>4 cadenas de globina.</li>
+                <li>4 grupos hemo.</li>
+                <li>Cada grupo hemo contiene hierro (Fe²⁺).</li>
+            </ul>
+
+            <div class="highlight">
+                Una molécula de hemoglobina puede transportar hasta 4 moléculas de oxígeno.
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Funciones de los eritrocitos</h2>
+        <ol>
+            <li><strong>Transporte de oxígeno:</strong> llevan oxígeno desde los pulmones hacia el cerebro, corazón, músculos, riñones, hígado y todos los tejidos corporales.</li>
+            <li><strong>Transporte de dióxido de carbono:</strong> retiran el CO₂ producido por las células y lo llevan hacia los pulmones.</li>
+            <li><strong>Regulación del pH sanguíneo:</strong> ayudan a mantener estable el equilibrio ácido-base de la sangre.</li>
+        </ol>
+    </div>
+
+    <div class="card">
+        <h2>Eritropoyesis</h2>
+        <p>La eritropoyesis es el proceso de formación de los eritrocitos.</p>
+
+        <h3>Lugar de producción</h3>
+        <ul>
+            <li>Esternón.</li>
+            <li>Costillas.</li>
+            <li>Vértebras.</li>
+            <li>Pelvis.</li>
+            <li>Huesos largos.</li>
+        </ul>
+
+        <h3>Etapas de formación</h3>
+        <ol>
+            <li>Célula madre hematopoyética.</li>
+            <li>Proeritroblasto.</li>
+            <li>Eritroblasto basófilo.</li>
+            <li>Eritroblasto policromatófilo.</li>
+            <li>Eritroblasto ortocromático.</li>
+            <li>Reticulocito.</li>
+            <li>Eritrocito maduro.</li>
+        </ol>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Eritropoyetina (EPO)</h2>
+            <p>Es una hormona producida principalmente por los riñones.</p>
+            <p><strong>Función:</strong> estimula la producción de eritrocitos cuando disminuye el oxígeno en los tejidos.</p>
+
+            <h3>Situaciones que aumentan la EPO</h3>
+            <ul>
+                <li>Hemorragias.</li>
+                <li>Anemia.</li>
+                <li>Altitud elevada.</li>
+                <li>Enfermedades pulmonares.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Metabolismo</h2>
+            <p>Debido a que carecen de mitocondrias:</p>
+            <ul>
+                <li>Obtienen energía mediante glucólisis anaerobia.</li>
+                <li>Consumen poca energía.</li>
+                <li>No utilizan el oxígeno que transportan.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Valores normales</h2>
+        <div class="grid">
+            <div>
+                <h3>Eritrocitos</h3>
+                <ul>
+                    <li><strong>Hombres:</strong> 4.5 a 6 millones/μL de sangre.</li>
+                    <li><strong>Mujeres:</strong> 4 a 5.5 millones/μL de sangre.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Hematocrito</h3>
+                <ul>
+                    <li><strong>Hombres:</strong> 42-52%.</li>
+                    <li><strong>Mujeres:</strong> 37-47%.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Hemoglobina</h3>
+                <ul>
+                    <li><strong>Hombres:</strong> 13.5 a 17.5 g/dL.</li>
+                    <li><strong>Mujeres:</strong> 12 a 16 g/dL.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Destrucción de los eritrocitos</h2>
+        <p>
+            Después de aproximadamente 120 días, los eritrocitos envejecen, pierden flexibilidad
+            y son eliminados principalmente por el bazo.
+        </p>
+
+        <h3>Destino de la hemoglobina</h3>
+        <ul>
+            <li><strong>Globina:</strong> se degrada en aminoácidos reutilizables.</li>
+            <li><strong>Hierro:</strong> se almacena o reutiliza para formar nueva hemoglobina.</li>
+            <li><strong>Grupo hemo:</strong> se transforma en biliverdina y bilirrubina.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Alteraciones de los eritrocitos</h2>
+
+        <div class="grid">
+            <div>
+                <h3>Anemia</h3>
+                <p>Disminución de eritrocitos o hemoglobina.</p>
+                <ul>
+                    <li>Fatiga.</li>
+                    <li>Debilidad.</li>
+                    <li>Mareos.</li>
+                    <li>Palidez.</li>
+                    <li>Falta de aire.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Policitemia</h3>
+                <p>Aumento excesivo de eritrocitos.</p>
+                <ul>
+                    <li>Sangre más espesa.</li>
+                    <li>Mayor riesgo de trombosis.</li>
+                    <li>Hipertensión.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Morfología anormal</h2>
+        <ul>
+            <li><strong>Esferocitos:</strong> forma esférica.</li>
+            <li><strong>Drepanocitos:</strong> forma de hoz o media luna.</li>
+            <li><strong>Eliptocitos:</strong> forma ovalada.</li>
+            <li><strong>Equinocitos:</strong> con pequeñas espículas.</li>
+            <li><strong>Acantocitos:</strong> con espículas irregulares.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Patologías de los eritrocitos</h2>
+        <div class="grid">
+            <ul>
+                <li>Anemia ferropénica.</li>
+                <li>Anemia megaloblástica.</li>
+                <li>Anemia aplásica.</li>
+                <li>Anemia hemolítica.</li>
+                <li>Anemia falciforme.</li>
+                <li>Talasemia.</li>
+                <li>Policitemia vera.</li>
+                <li>Esferocitosis hereditaria.</li>
+                <li>Eliptocitosis hereditaria.</li>
+                <li>Deficiencia de G6PD.</li>
+            </ul>
+
+            <ul>
+                <li>Eritroblastosis fetal.</li>
+                <li>Hemoglobinopatías.</li>
+                <li>Anemia de enfermedades crónicas.</li>
+                <li>Anemia por insuficiencia renal.</li>
+                <li>Anemia sideroblástica.</li>
+                <li>Anemia perniciosa.</li>
+                <li>Hemoglobinuria paroxística nocturna.</li>
+                <li>Microcitosis.</li>
+                <li>Macrocitosis.</li>
+                <li>Hipocromía.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Importancia clínica</h2>
+        <p>El estudio de los eritrocitos permite diagnosticar:</p>
+        <ul>
+            <li>Anemia ferropénica.</li>
+            <li>Anemia megaloblástica.</li>
+            <li>Talasemias.</li>
+            <li>Policitemia.</li>
+            <li>Hemorragias.</li>
+            <li>Enfermedades renales.</li>
+            <li>Enfermedades hepáticas.</li>
+            <li>Trastornos hematológicos.</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+Anatomía Humana • Eritrocitos o Glóbulos Rojos • Tecnológico Boliviano Alemán
+</footer>
+
+</body>
+</html>
+```
