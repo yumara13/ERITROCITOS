@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -121,19 +122,77 @@ li{
     gap:22px;
 }
 
-.imagen-grande{
+/* IMÁGENES */
+
+.imagen-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:20px;
+}
+
+.imagen-grid-3{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
+
+.imagen-card{
     background:white;
     border-radius:18px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.18);
-    margin:28px 0;
-    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.16);
+    padding:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.imagen-grande img{
+.imagen-card img{
+    width:100%;
+    max-height:430px;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+.imagen-sola{
+    width:85%;
+    max-width:850px;
+    margin:28px auto;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.16);
+    padding:12px;
+}
+
+.imagen-sola img{
+    width:100%;
+    max-height:520px;
+    object-fit:contain;
+    display:block;
+    border-radius:12px;
+}
+
+.imagen-larga{
+    width:100%;
+    max-width:1050px;
+    margin:28px auto 0;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.16);
+    padding:12px;
+}
+
+.imagen-larga img{
     width:100%;
     height:auto;
+    max-height:none;
+    object-fit:contain;
     display:block;
+    border-radius:12px;
 }
 
 .seccion-titulo{
@@ -182,8 +241,22 @@ footer{
     }
 
     .card-doble,
-    .grid{
+    .grid,
+    .imagen-grid,
+    .imagen-grid-3{
         grid-template-columns:1fr;
+    }
+
+    .imagen-sola,
+    .imagen-larga{
+        width:100%;
+    }
+
+    .imagen-card img,
+    .imagen-sola img,
+    .imagen-larga img{
+        max-height:none;
+        width:100%;
     }
 
     h2{
@@ -216,12 +289,14 @@ footer{
     <div class="card">
         <h2>Eritrocitos o Glóbulos Rojos</h2>
 
-        <div class="imagen-grande">
-            <img src="GLOBULOS.png" alt="Glóbulos rojos">
-        </div>
+        <div class="imagen-grid">
+            <div class="imagen-card">
+                <img src="GLOBULOS.png" alt="Glóbulos rojos">
+            </div>
 
-        <div class="imagen-grande">
-            <img src="GLOBULOS2.png" alt="Glóbulos rojos">
+            <div class="imagen-card">
+                <img src="GLOBULOS2.png" alt="Glóbulos rojos">
+            </div>
         </div>
     </div>
 
@@ -307,10 +382,23 @@ footer{
     </div>
 
     <div class="card">
-        <div class="imagen-grande"><img src="1MOR.png" alt="Morfología eritrocitaria"></div>
-        <div class="imagen-grande"><img src="2MOR.png" alt="Morfología eritrocitaria"></div>
-        <div class="imagen-grande"><img src="3MOR.png" alt="Morfología eritrocitaria"></div>
-        <div class="imagen-grande"><img src="4MOR.png" alt="Morfología eritrocitaria"></div>
+        <div class="imagen-grid">
+            <div class="imagen-card">
+                <img src="1MOR.png" alt="Morfología eritrocitaria">
+            </div>
+
+            <div class="imagen-card">
+                <img src="2MOR.png" alt="Morfología eritrocitaria">
+            </div>
+
+            <div class="imagen-card">
+                <img src="3MOR.png" alt="Morfología eritrocitaria">
+            </div>
+
+            <div class="imagen-card">
+                <img src="4MOR.png" alt="Morfología eritrocitaria">
+            </div>
+        </div>
     </div>
 
     <div class="grid">
@@ -488,6 +576,7 @@ footer{
 
     <div class="card">
         <h2>Importancia clínica</h2>
+
         <div class="grid">
             <div class="bloque">Anemia ferropénica.</div>
             <div class="bloque">Anemia megaloblástica.</div>
@@ -499,7 +588,7 @@ footer{
             <div class="bloque">Trastornos hematológicos.</div>
         </div>
 
-        <div class="imagen-grande">
+        <div class="imagen-sola">
             <img src="ROJOS.png" alt="Eritrocitos">
         </div>
     </div>
@@ -544,15 +633,17 @@ footer{
         <h2>El Eritrocito Glóbulo Rojo</h2>
         <p><strong>Estructura y función.</strong></p>
 
-        <div class="imagen-grande">
-            <img src="ERI1.jpeg" alt="Eritrocito estructura y función">
+        <div class="imagen-grid">
+            <div class="imagen-card">
+                <img src="ERI1.jpeg" alt="Eritrocito estructura y función">
+            </div>
+
+            <div class="imagen-card">
+                <img src="ERI2.jpeg" alt="Eritrocito estructura y función">
+            </div>
         </div>
 
-        <div class="imagen-grande">
-            <img src="ERI2.jpeg" alt="Eritrocito estructura y función">
-        </div>
-
-        <div class="imagen-grande">
+        <div class="imagen-larga">
             <img src="ERI3.jpeg" alt="Eritrocito estructura y función">
         </div>
     </div>
