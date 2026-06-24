@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,11 +37,6 @@ body{
 
 .logo-area img{
     width:70px;
-    height:auto;
-}
-
-.logo-area h3{
-    font-size:20px;
 }
 
 .autor{
@@ -52,7 +46,7 @@ body{
 
 header{
     text-align:center;
-    padding:50px 20px;
+    padding:55px 20px;
     background:linear-gradient(90deg,#ef5350,#b71c1c);
     color:white;
 }
@@ -74,22 +68,35 @@ header p{
 
 .card{
     background:white;
-    padding:25px;
+    padding:28px;
+    border-radius:18px;
+    margin-bottom:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+}
+
+.card-doble{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.bloque{
+    background:#fff5f5;
+    padding:20px;
     border-radius:15px;
-    margin-bottom:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    border-left:5px solid #e53935;
 }
 
 h2{
     color:#b71c1c;
-    border-left:6px solid #e53935;
-    padding-left:10px;
-    margin-bottom:15px;
+    border-left:7px solid #e53935;
+    padding-left:12px;
+    margin-bottom:20px;
 }
 
 h3{
     color:#c62828;
-    margin:15px 0 8px;
+    margin:12px 0 8px;
 }
 
 ul, ol{
@@ -102,38 +109,40 @@ li{
 
 .highlight{
     background:#ffebee;
-    padding:15px;
+    padding:18px;
     border-left:5px solid #e53935;
-    border-radius:10px;
+    border-radius:12px;
+    margin-top:15px;
 }
 
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+    gap:22px;
 }
 
 .imagen-grande{
     background:white;
-    border-radius:15px;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    margin:25px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.18);
+    margin:28px 0;
     text-align:center;
 }
 
 .imagen-grande img{
     width:100%;
-    max-width:100%;
     height:auto;
     display:block;
 }
 
-.imagen-grande h3{
-    padding:15px;
-    margin:0;
-    background:#ffebee;
-    color:#b71c1c;
+.seccion-titulo{
+    text-align:center;
+    background:#b71c1c;
+    color:white;
+    padding:18px;
+    border-radius:16px;
+    margin:35px 0 25px;
 }
 
 footer{
@@ -145,42 +154,22 @@ footer{
 }
 
 @media screen and (max-width:768px){
-
     .header-top{
         flex-direction:column;
         text-align:center;
         gap:15px;
-        padding:15px;
     }
 
     .logo-area{
         flex-direction:column;
-        text-align:center;
-    }
-
-    .logo-area img{
-        width:60px;
-    }
-
-    .logo-area h3{
-        font-size:18px;
     }
 
     .autor{
         text-align:center;
-        font-size:16px;
-    }
-
-    header{
-        padding:30px 15px;
     }
 
     header h1{
         font-size:2rem;
-    }
-
-    header p{
-        font-size:1rem;
     }
 
     .container{
@@ -189,23 +178,16 @@ footer{
     }
 
     .card{
-        padding:15px;
+        padding:18px;
     }
 
+    .card-doble,
     .grid{
         grid-template-columns:1fr;
     }
 
     h2{
         font-size:1.3rem;
-    }
-
-    h3{
-        font-size:1rem;
-    }
-
-    ul, ol{
-        padding-left:18px;
     }
 }
 </style>
@@ -235,40 +217,56 @@ footer{
         <h2>Eritrocitos o Glóbulos Rojos</h2>
 
         <div class="imagen-grande">
-            <img src="GLOBULOS.png" alt="Glóbulo rojo">
-            
+            <img src="GLOBULOS.png" alt="Glóbulos rojos">
         </div>
 
         <div class="imagen-grande">
-            <img src="GLOBULOS2.png" alt="Glóbulo rojo">
-           
+            <img src="GLOBULOS2.png" alt="Glóbulos rojos">
         </div>
     </div>
 
     <div class="card">
         <h2>Características generales</h2>
-        <ul>
-            <li><strong>Nombre:</strong> Eritrocito, hematíe o glóbulo rojo.</li>
-            <li><strong>Forma:</strong> Disco bicóncavo.</li>
-            <li><strong>Color:</strong> Rojo debido a la hemoglobina.</li>
-            <li><strong>Tamaño:</strong> Aproximadamente 7-8 μm de diámetro.</li>
-            <li><strong>Grosor:</strong> 2 μm en los bordes y 1 μm en el centro.</li>
-            <li><strong>Núcleo:</strong> Ausente en los eritrocitos maduros.</li>
-            <li><strong>Orgánulos:</strong> No poseen mitocondrias, retículo endoplasmático ni aparato de Golgi.</li>
-            <li><strong>Vida media:</strong> Aproximadamente 120 días.</li>
-            <li><strong>Producción:</strong> Médula ósea roja.</li>
-            <li><strong>Destrucción:</strong> Principalmente en el bazo, hígado y médula ósea.</li>
-        </ul>
+
+        <div class="card-doble">
+            <div class="bloque">
+                <ul>
+                    <li><strong>Nombre:</strong> Eritrocito, hematíe o glóbulo rojo.</li>
+                    <li><strong>Forma:</strong> Disco bicóncavo.</li>
+                    <li><strong>Color:</strong> Rojo debido a la hemoglobina.</li>
+                    <li><strong>Tamaño:</strong> Aproximadamente 7-8 μm de diámetro.</li>
+                    <li><strong>Grosor:</strong> 2 μm en los bordes y 1 μm en el centro.</li>
+                </ul>
+            </div>
+
+            <div class="bloque">
+                <ul>
+                    <li><strong>Núcleo:</strong> Ausente en eritrocitos maduros.</li>
+                    <li><strong>Orgánulos:</strong> No poseen mitocondrias, retículo endoplasmático ni aparato de Golgi.</li>
+                    <li><strong>Vida media:</strong> Aproximadamente 120 días.</li>
+                    <li><strong>Producción:</strong> Médula ósea roja.</li>
+                    <li><strong>Destrucción:</strong> Bazo, hígado y médula ósea.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>Forma de los eritrocitos</h2>
-        <p>
-            Los eritrocitos tienen forma de disco bicóncavo, es decir, están hundidos en el centro por ambas caras.
-        </p>
+    <div class="grid">
+        <div class="card">
+            <h2>Forma de los eritrocitos</h2>
+            <p>
+                Los eritrocitos tienen forma de disco bicóncavo, es decir,
+                están hundidos en el centro por ambas caras.
+            </p>
 
-        <div class="highlight">
-            <strong>Ventajas de esta forma:</strong>
+            <div class="highlight">
+                Esta forma permite mayor superficie para el intercambio de gases
+                y facilita el paso por capilares muy estrechos.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Ventajas de su forma</h2>
             <ul>
                 <li>Aumenta la superficie para el intercambio de gases.</li>
                 <li>Facilita el transporte de oxígeno y dióxido de carbono.</li>
@@ -281,120 +279,104 @@ footer{
     <div class="card">
         <h2>Composición de los eritrocitos</h2>
 
-        <h3>Membrana plasmática</h3>
-        <p>Está formada por:</p>
-        <ul>
-            <li>Fosfolípidos.</li>
-            <li>Colesterol.</li>
-            <li>Proteínas integrales y periféricas.</li>
-        </ul>
-        <p>Su membrana es muy flexible y resistente.</p>
+        <div class="card-doble">
+            <div class="bloque">
+                <h3>Membrana plasmática</h3>
+                <ul>
+                    <li>Fosfolípidos.</li>
+                    <li>Colesterol.</li>
+                    <li>Proteínas integrales y periféricas.</li>
+                </ul>
+                <p>Su membrana es muy flexible y resistente.</p>
+            </div>
 
-        <h3>Citoplasma</h3>
-        <p>Contiene principalmente:</p>
-        <ul>
-            <li>Agua.</li>
-            <li>Hemoglobina.</li>
-            <li>Enzimas metabólicas.</li>
-            <li>Electrolitos.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>El Eritrocito (Glóbulo Rojo)</h2>
-        <p><strong>Estructura, función y patologías.</strong></p>
-
-        <div class="imagen-grande">
-            <img src="1MOR.png" alt="Morfología eritrocitaria">
-            
-        </div>
-
-        <div class="imagen-grande">
-            <img src="2MOR.png" alt="Morfología eritrocitaria">
-        </div>
-
-        <div class="imagen-grande">
-            <img src="3MOR.png" alt="Morfología eritrocitaria">
-            
-        </div>
-
-        <div class="imagen-grande">
-            <img src="4MOR.png" alt="Morfología eritrocitaria">
-            
+            <div class="bloque">
+                <h3>Citoplasma</h3>
+                <ul>
+                    <li>Agua.</li>
+                    <li>Hemoglobina.</li>
+                    <li>Enzimas metabólicas.</li>
+                    <li>Electrolitos.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <h2>Hemoglobina</h2>
-        <p>La hemoglobina es la proteína más importante de los eritrocitos.</p>
-
-        <h3>Funciones</h3>
-        <ul>
-            <li>Transportar oxígeno.</li>
-            <li>Transportar parte del dióxido de carbono.</li>
-            <li>Ayudar a mantener el equilibrio ácido-base.</li>
-        </ul>
-
-        <div class="highlight">
-            Una molécula de hemoglobina puede transportar hasta 4 moléculas de oxígeno.
-        </div>
+    <div class="seccion-titulo">
+        <h2 style="color:white;border:none;padding:0;margin:0;">El Eritrocito: estructura, función y patologías</h2>
     </div>
 
     <div class="card">
-        <h2>Funciones de los eritrocitos</h2>
-
-        <h3>1. Transporte de oxígeno</h3>
-        <p>Llevan oxígeno desde los pulmones hasta:</p>
-        <ul>
-            <li>Cerebro.</li>
-            <li>Corazón.</li>
-            <li>Músculos.</li>
-            <li>Riñones.</li>
-            <li>Hígado.</li>
-            <li>Todos los tejidos corporales.</li>
-        </ul>
-
-        <h3>2. Transporte de dióxido de carbono</h3>
-        <p>
-            Retiran el CO₂ producido por las células y lo llevan hacia los pulmones para ser eliminado mediante la respiración.
-        </p>
-
-        <h3>3. Regulación del pH sanguíneo</h3>
-        <p>Ayudan a mantener estable el equilibrio ácido-base de la sangre.</p>
-    </div>
-
-    <div class="card">
-        <h2>Eritropoyesis</h2>
-        <p>La eritropoyesis es el proceso de formación de los eritrocitos.</p>
-
-        <h3>Lugar de producción</h3>
-        <ul>
-            <li>Esternón.</li>
-            <li>Costillas.</li>
-            <li>Vértebras.</li>
-            <li>Pelvis.</li>
-            <li>Huesos largos.</li>
-        </ul>
-
-        <h3>Etapas de formación</h3>
-        <ol>
-            <li>Célula madre hematopoyética.</li>
-            <li>Proeritroblasto.</li>
-            <li>Eritroblasto basófilo.</li>
-            <li>Eritroblasto policromatófilo.</li>
-            <li>Eritroblasto ortocromático.</li>
-            <li>Reticulocito.</li>
-            <li>Eritrocito maduro.</li>
-        </ol>
+        <div class="imagen-grande"><img src="1MOR.png" alt="Morfología eritrocitaria"></div>
+        <div class="imagen-grande"><img src="2MOR.png" alt="Morfología eritrocitaria"></div>
+        <div class="imagen-grande"><img src="3MOR.png" alt="Morfología eritrocitaria"></div>
+        <div class="imagen-grande"><img src="4MOR.png" alt="Morfología eritrocitaria"></div>
     </div>
 
     <div class="grid">
         <div class="card">
-            <h2>Eritropoyetina (EPO)</h2>
-            <p>Es una hormona producida principalmente por los riñones.</p>
-            <p><strong>Función:</strong> estimula la producción de eritrocitos cuando disminuye el oxígeno en los tejidos.</p>
+            <h2>Hemoglobina</h2>
+            <p>La hemoglobina es la proteína más importante de los eritrocitos.</p>
 
-            <h3>Situaciones que aumentan la EPO</h3>
+            <h3>Funciones</h3>
+            <ul>
+                <li>Transportar oxígeno.</li>
+                <li>Transportar parte del dióxido de carbono.</li>
+                <li>Ayudar a mantener el equilibrio ácido-base.</li>
+            </ul>
+
+            <div class="highlight">
+                Una molécula de hemoglobina puede transportar hasta 4 moléculas de oxígeno.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Funciones de los eritrocitos</h2>
+            <ul>
+                <li><strong>Transporte de oxígeno:</strong> desde los pulmones hacia los tejidos.</li>
+                <li><strong>Transporte de dióxido de carbono:</strong> hacia los pulmones para su eliminación.</li>
+                <li><strong>Regulación del pH sanguíneo:</strong> mantiene el equilibrio ácido-base.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Eritropoyesis</h2>
+
+        <div class="card-doble">
+            <div class="bloque">
+                <h3>Lugar de producción</h3>
+                <ul>
+                    <li>Esternón.</li>
+                    <li>Costillas.</li>
+                    <li>Vértebras.</li>
+                    <li>Pelvis.</li>
+                    <li>Huesos largos.</li>
+                </ul>
+            </div>
+
+            <div class="bloque">
+                <h3>Etapas de formación</h3>
+                <ol>
+                    <li>Célula madre hematopoyética.</li>
+                    <li>Proeritroblasto.</li>
+                    <li>Eritroblasto basófilo.</li>
+                    <li>Eritroblasto policromatófilo.</li>
+                    <li>Eritroblasto ortocromático.</li>
+                    <li>Reticulocito.</li>
+                    <li>Eritrocito maduro.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Eritropoyetina</h2>
+            <p>Es una hormona producida principalmente por los riñones.</p>
+            <p><strong>Función:</strong> estimula la producción de eritrocitos cuando disminuye el oxígeno.</p>
+
+            <h3>Aumenta en:</h3>
             <ul>
                 <li>Hemorragias.</li>
                 <li>Anemia.</li>
@@ -417,125 +399,145 @@ footer{
     <div class="card">
         <h2>Valores normales</h2>
 
-        <h3>Eritrocitos</h3>
-        <ul>
-            <li><strong>Hombres:</strong> 4.5 a 6 millones/μL de sangre.</li>
-            <li><strong>Mujeres:</strong> 4 a 5.5 millones/μL de sangre.</li>
-        </ul>
+        <div class="grid">
+            <div class="bloque">
+                <h3>Eritrocitos</h3>
+                <ul>
+                    <li><strong>Hombres:</strong> 4.5 a 6 millones/μL.</li>
+                    <li><strong>Mujeres:</strong> 4 a 5.5 millones/μL.</li>
+                </ul>
+            </div>
 
-        <h3>Hematocrito</h3>
-        <p>Es el porcentaje de sangre ocupado por eritrocitos.</p>
-        <ul>
-            <li><strong>Hombres:</strong> 42-52%.</li>
-            <li><strong>Mujeres:</strong> 37-47%.</li>
-        </ul>
+            <div class="bloque">
+                <h3>Hematocrito</h3>
+                <ul>
+                    <li><strong>Hombres:</strong> 42-52%.</li>
+                    <li><strong>Mujeres:</strong> 37-47%.</li>
+                </ul>
+            </div>
 
-        <h3>Hemoglobina normal</h3>
-        <ul>
-            <li><strong>Hombres:</strong> 13.5 a 17.5 g/dL.</li>
-            <li><strong>Mujeres:</strong> 12 a 16 g/dL.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Destrucción de los eritrocitos</h2>
-        <p>Después de aproximadamente 120 días:</p>
-        <ul>
-            <li>Envejecen.</li>
-            <li>Pierden flexibilidad.</li>
-            <li>Son eliminados principalmente por el bazo.</li>
-        </ul>
-
-        <h3>Destino de la hemoglobina</h3>
-        <ul>
-            <li><strong>Globina:</strong> se degrada en aminoácidos reutilizables.</li>
-            <li><strong>Hierro:</strong> se almacena o reutiliza para formar nueva hemoglobina.</li>
-            <li><strong>Grupo hemo:</strong> se transforma en biliverdina y bilirrubina.</li>
-            <li>La bilirrubina es eliminada por el hígado.</li>
-        </ul>
+            <div class="bloque">
+                <h3>Hemoglobina</h3>
+                <ul>
+                    <li><strong>Hombres:</strong> 13.5 a 17.5 g/dL.</li>
+                    <li><strong>Mujeres:</strong> 12 a 16 g/dL.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="grid">
         <div class="card">
-            <h2>Anemia</h2>
-            <p>Disminución de eritrocitos o hemoglobina.</p>
-            <h3>Síntomas</h3>
+            <h2>Destrucción de los eritrocitos</h2>
             <ul>
-                <li>Fatiga.</li>
-                <li>Debilidad.</li>
-                <li>Mareos.</li>
-                <li>Palidez.</li>
-                <li>Falta de aire.</li>
+                <li>Envejecen después de aproximadamente 120 días.</li>
+                <li>Pierden flexibilidad.</li>
+                <li>Son eliminados principalmente por el bazo.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Policitemia</h2>
-            <p>Aumento excesivo de eritrocitos.</p>
-            <h3>Consecuencias</h3>
+            <h2>Destino de la hemoglobina</h2>
             <ul>
-                <li>Sangre más espesa.</li>
-                <li>Mayor riesgo de trombosis.</li>
-                <li>Hipertensión.</li>
+                <li><strong>Globina:</strong> aminoácidos reutilizables.</li>
+                <li><strong>Hierro:</strong> se almacena o reutiliza.</li>
+                <li><strong>Grupo hemo:</strong> biliverdina y bilirrubina.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Alteraciones de los eritrocitos</h2>
+
+        <div class="card-doble">
+            <div class="bloque">
+                <h3>Anemia</h3>
+                <p>Disminución de eritrocitos o hemoglobina.</p>
+                <ul>
+                    <li>Fatiga.</li>
+                    <li>Debilidad.</li>
+                    <li>Mareos.</li>
+                    <li>Palidez.</li>
+                    <li>Falta de aire.</li>
+                </ul>
+            </div>
+
+            <div class="bloque">
+                <h3>Policitemia</h3>
+                <p>Aumento excesivo de eritrocitos.</p>
+                <ul>
+                    <li>Sangre más espesa.</li>
+                    <li>Mayor riesgo de trombosis.</li>
+                    <li>Hipertensión.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="card">
         <h2>Morfología anormal de eritrocitos</h2>
-        <ul>
-            <li><strong>Esferocitos:</strong> forma esférica.</li>
-            <li><strong>Drepanocitos:</strong> forma de hoz o media luna.</li>
-            <li><strong>Eliptocitos:</strong> forma ovalada.</li>
-            <li><strong>Equinocitos:</strong> con pequeñas espículas.</li>
-            <li><strong>Acantocitos:</strong> con espículas irregulares.</li>
-        </ul>
+
+        <div class="grid">
+            <div class="bloque"><strong>Esferocitos:</strong> forma esférica.</div>
+            <div class="bloque"><strong>Drepanocitos:</strong> forma de hoz o media luna.</div>
+            <div class="bloque"><strong>Eliptocitos:</strong> forma ovalada.</div>
+            <div class="bloque"><strong>Equinocitos:</strong> con pequeñas espículas.</div>
+            <div class="bloque"><strong>Acantocitos:</strong> con espículas irregulares.</div>
+        </div>
     </div>
 
     <div class="card">
         <h2>Importancia clínica</h2>
-        <p>El estudio de los eritrocitos permite diagnosticar:</p>
-        <ul>
-            <li>Anemia ferropénica.</li>
-            <li>Anemia megaloblástica.</li>
-            <li>Talasemias.</li>
-            <li>Policitemia.</li>
-            <li>Hemorragias.</li>
-            <li>Enfermedades renales.</li>
-            <li>Enfermedades hepáticas.</li>
-            <li>Trastornos hematológicos.</li>
-        </ul>
+        <div class="grid">
+            <div class="bloque">Anemia ferropénica.</div>
+            <div class="bloque">Anemia megaloblástica.</div>
+            <div class="bloque">Talasemias.</div>
+            <div class="bloque">Policitemia.</div>
+            <div class="bloque">Hemorragias.</div>
+            <div class="bloque">Enfermedades renales.</div>
+            <div class="bloque">Enfermedades hepáticas.</div>
+            <div class="bloque">Trastornos hematológicos.</div>
+        </div>
 
         <div class="imagen-grande">
             <img src="ROJOS.png" alt="Eritrocitos">
-           
         </div>
     </div>
 
     <div class="card">
         <h2>Patologías de los Eritrocitos</h2>
-        <ul>
-            <li><strong>Anemia ferropénica:</strong> causada por deficiencia de hierro.</li>
-            <li><strong>Anemia megaloblástica:</strong> producida por déficit de vitamina B12 o ácido fólico.</li>
-            <li><strong>Anemia aplásica:</strong> la médula ósea produce una cantidad insuficiente de células sanguíneas.</li>
-            <li><strong>Anemia hemolítica:</strong> destrucción prematura de los glóbulos rojos.</li>
-            <li><strong>Anemia falciforme:</strong> los eritrocitos adquieren forma de hoz.</li>
-            <li><strong>Talasemia:</strong> trastorno hereditario que afecta la producción normal de hemoglobina.</li>
-            <li><strong>Policitemia vera:</strong> aumento anormal de glóbulos rojos.</li>
-            <li><strong>Esferocitosis hereditaria:</strong> eritrocitos con forma esférica.</li>
-            <li><strong>Eliptocitosis hereditaria:</strong> glóbulos rojos con forma ovalada o elíptica.</li>
-            <li><strong>Deficiencia de G6PD:</strong> favorece la destrucción de eritrocitos.</li>
-            <li><strong>Eritroblastosis fetal:</strong> destrucción de eritrocitos del feto.</li>
-            <li><strong>Hemoglobinopatías:</strong> alteraciones genéticas de la hemoglobina.</li>
-            <li><strong>Anemia de enfermedades crónicas:</strong> asociada a infecciones, enfermedades autoinmunes o cáncer.</li>
-            <li><strong>Anemia por insuficiencia renal:</strong> disminución de eritropoyetina.</li>
-            <li><strong>Anemia sideroblástica:</strong> alteración en el uso del hierro.</li>
-            <li><strong>Anemia perniciosa:</strong> mala absorción de vitamina B12.</li>
-            <li><strong>Hemoglobinuria paroxística nocturna:</strong> destrucción anormal de eritrocitos.</li>
-            <li><strong>Microcitosis:</strong> eritrocitos más pequeños de lo normal.</li>
-            <li><strong>Macrocitosis:</strong> eritrocitos más grandes de lo normal.</li>
-            <li><strong>Hipocromía:</strong> disminución de hemoglobina en los glóbulos rojos.</li>
-        </ul>
+
+        <div class="card-doble">
+            <div class="bloque">
+                <ul>
+                    <li><strong>Anemia ferropénica:</strong> deficiencia de hierro.</li>
+                    <li><strong>Anemia megaloblástica:</strong> déficit de vitamina B12 o ácido fólico.</li>
+                    <li><strong>Anemia aplásica:</strong> baja producción de células sanguíneas.</li>
+                    <li><strong>Anemia hemolítica:</strong> destrucción prematura de glóbulos rojos.</li>
+                    <li><strong>Anemia falciforme:</strong> eritrocitos en forma de hoz.</li>
+                    <li><strong>Talasemia:</strong> alteración hereditaria de la hemoglobina.</li>
+                    <li><strong>Policitemia vera:</strong> aumento anormal de glóbulos rojos.</li>
+                    <li><strong>Esferocitosis hereditaria:</strong> eritrocitos esféricos.</li>
+                    <li><strong>Eliptocitosis hereditaria:</strong> eritrocitos ovalados.</li>
+                    <li><strong>Deficiencia de G6PD:</strong> destrucción de eritrocitos.</li>
+                </ul>
+            </div>
+
+            <div class="bloque">
+                <ul>
+                    <li><strong>Eritroblastosis fetal:</strong> incompatibilidad sanguínea materno-fetal.</li>
+                    <li><strong>Hemoglobinopatías:</strong> alteraciones genéticas de la hemoglobina.</li>
+                    <li><strong>Anemia de enfermedades crónicas:</strong> infecciones, autoinmunidad o cáncer.</li>
+                    <li><strong>Anemia por insuficiencia renal:</strong> disminución de eritropoyetina.</li>
+                    <li><strong>Anemia sideroblástica:</strong> alteración en el uso del hierro.</li>
+                    <li><strong>Anemia perniciosa:</strong> mala absorción de vitamina B12.</li>
+                    <li><strong>Hemoglobinuria paroxística nocturna:</strong> destrucción anormal.</li>
+                    <li><strong>Microcitosis:</strong> eritrocitos pequeños.</li>
+                    <li><strong>Macrocitosis:</strong> eritrocitos grandes.</li>
+                    <li><strong>Hipocromía:</strong> disminución de hemoglobina.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="card">
@@ -544,17 +546,14 @@ footer{
 
         <div class="imagen-grande">
             <img src="ERI1.jpeg" alt="Eritrocito estructura y función">
-           
         </div>
 
         <div class="imagen-grande">
             <img src="ERI2.jpeg" alt="Eritrocito estructura y función">
-            
         </div>
 
         <div class="imagen-grande">
             <img src="ERI3.jpeg" alt="Eritrocito estructura y función">
-            
         </div>
     </div>
 
