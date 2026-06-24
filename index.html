@@ -122,7 +122,7 @@ li{
     gap:22px;
 }
 
-/* IMÁGENES */
+/* IMÁGENES MEJORADAS */
 
 .imagen-grid{
     display:grid;
@@ -170,26 +170,6 @@ li{
 .imagen-sola img{
     width:100%;
     max-height:520px;
-    object-fit:contain;
-    display:block;
-    border-radius:12px;
-}
-
-.imagen-larga{
-    width:100%;
-    max-width:1050px;
-    margin:28px auto 0;
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.16);
-    padding:12px;
-}
-
-.imagen-larga img{
-    width:100%;
-    height:auto;
-    max-height:none;
     object-fit:contain;
     display:block;
     border-radius:12px;
@@ -247,14 +227,12 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .imagen-sola,
-    .imagen-larga{
+    .imagen-sola{
         width:100%;
     }
 
     .imagen-card img,
-    .imagen-sola img,
-    .imagen-larga img{
+    .imagen-sola img{
         max-height:none;
         width:100%;
     }
@@ -633,18 +611,21 @@ footer{
         <h2>El Eritrocito Glóbulo Rojo</h2>
         <p><strong>Estructura y función.</strong></p>
 
-        <div class="imagen-grid">
-            <div class="imagen-card">
-                <img src="ERI1.jpeg" alt="Eritrocito estructura y función">
-            </div>
-
-            <div class="imagen-card">
-                <img src="ERI2.jpeg" alt="Eritrocito estructura y función">
-            </div>
+        <div class="imagen-grid-3">
+        <div class="imagen-card">
+            <img src="ERI1.jpeg" alt="Eritrocito estructura y función">
         </div>
 
-        <div class="imagen-larga">
+        <div class="imagen-card">
+            <img src="ERI2.jpeg" alt="Eritrocito estructura y función">
+        </div>
+
+        <div class="imagen-card">
             <img src="ERI3.jpeg" alt="Eritrocito estructura y función">
+        </div>
+    </div>
+</div>
+            </div>
         </div>
     </div>
 
